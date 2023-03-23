@@ -1,0 +1,23 @@
+{
+	"tasks": {
+		"start": "deno run -A --watch server.ts"
+	},
+	"fmt": {
+		"files": {
+			"include": ["routes", "islands", "components", "."]
+		},
+		"options": {
+			"useTabs": true,
+			"indentWidth": 4,
+			"singleQuote": false
+		}
+	},
+	"lint": {
+		"files": {
+			"include": ["routes", "islands", "components", "."]
+		},
+		"rules": {
+			"tags": ["recommended"]
+		}
+	}
+}
