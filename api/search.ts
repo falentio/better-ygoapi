@@ -6,7 +6,7 @@ const cardsPromise = axios
 	.get("https://db.ygoprodeck.com/api/v7/cardinfo.php")
 	.then(res => res.data.data)
 const versionPromise = axios
-	.get("https://db.ygoprodeck.com/api/v7/checkDBVersion.php")
+	.get("https://db.ygoprodeck.com/api/v7/checkDBVer.php")
 	.then(res => res.data[0])
 const uf = new uFuzzy({})
 
