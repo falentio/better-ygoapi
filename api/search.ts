@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 	const version = await versionPromise
 	const name = req.query.name
 	const filters = [req.query.filters].flat(1).filter(Boolean)
-	const result = search(cards, name, filters)
+	const result = !!name  ? search(cards, name, filters) : []
 	res
 		.setHeader("cache-control", "public, max-age=3600")
 		.setHeader("x-ygoprodeck-version", version.database_version)
